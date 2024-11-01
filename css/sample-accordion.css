@@ -1,0 +1,109 @@
+
+#accordion {
+	color:#fff;
+	height:240px;
+	list-style:none;
+	margin:0;
+	overflow:scroll;
+	padding:0;
+	text-shadow:0 1px 0 #333;
+	width:840px;
+}
+#accordion li {
+	height:240px;
+	position:relative;
+}
+
+/*
+If you wish to use a singular background for the slide_handle
+#accordion .slide_handle {
+	background:url(../images/accordion/handles.png);
+	bottom:0;
+	cursor:pointer;
+	left:0;
+	position:absolute;
+	top:0;
+	width:40px;
+}
+#accordion .slide2 .slide_handle { background-position:-40px 0; }
+#accordion .slide3 .slide_handle { background-position:-80px 0; }
+#accordion .slide4 .slide_handle { background-position:-120px 0; }
+*/
+#accordion .slide_handle {
+	bottom:0;
+	cursor:pointer;
+	left:0;
+	position:absolute;
+	top:0;
+	width:40px;
+	background: #FFFFFF;
+	border: none;
+}
+
+p.css-vertical-text {
+	color:#333;
+	border:0px solid red;
+	writing-mode:tb-rl;
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	white-space:nowrap;
+	display:block;
+	bottom:0;
+	width:210px;
+	height:200px;
+	font-family: ‘Calibri’, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:normal;
+	text-shadow: 0px 0px 1px #333;
+	filter: flipv fliph;
+}
+
+#accordion .slide_handle div {
+	background:url(../images/accordion/arrows.gif);
+	bottom:16px;
+	height:7px;
+	left:16px;
+	position:absolute;
+	width:7px;
+}
+#accordion .slide_opened .slide_handle { cursor:default; }
+#accordion .slide_opened .slide_handle div { background-position:0 -7px; }
+#accordion .slide_content {
+	bottom:0;
+	left:40px; /* Matches the width of .slide_handle */
+	position:absolute;
+	right:0;
+	top:0;
+}
+#accordion .slide_content a img { border:0; }
+#accordion .slide_caption {
+	background:url(../images/accordion/black-30pct.png); /* You could use rgba instead, but that means less browser support */
+	bottom:0;
+	left:0;
+	padding:10px 20px;
+	position:absolute;
+	right:0;
+	/* To change the height of the caption, set the captionHeight option in script.js */
+}
+#accordion .slide_caption_toggle {
+	cursor:pointer;
+	height:10px;
+	left:0;
+	position:absolute;
+	right:0;
+	top:0;
+}
+#accordion .slide_caption_toggle div {
+	background:url(../images/accordion/toggle-caption.png) no-repeat 50% -10px;
+	height:100%;
+}
+#accordion .slide_caption_toggle:hover { background:url(../images/accordion/black-30pct.png); }
+#accordion .slide_caption_collapsed .slide_caption_toggle div { background-position:50% 0; }
+#accordion a {
+	background:none;
+	color:#fff;
+	text-shadow:0 1px 0 #333;
+}
+#accordion a:hover { text-decoration:none; }
+#accordion .slide4 .slide_content { background:url(../images/accordion/digital-noise.png) 100% 0; }
